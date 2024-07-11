@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
 
 .container {
@@ -26,6 +27,7 @@ nav ul {
     list-style: none;
     padding: 0;
     text-align: center;
+    margin: 0;
 }
 
 nav ul li {
@@ -47,6 +49,11 @@ section {
 
 section h2 {
     text-align: center;
+    margin-top: 0;
+}
+
+section p {
+    text-align: center;
 }
 
 footer {
@@ -54,4 +61,18 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
 }
