@@ -53,6 +53,7 @@ section {
 section h2 {
     text-align: center;
     margin-top: 0;
+    color: #222; /* Couleur de titre plus sombre */
 }
 
 section p {
