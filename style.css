@@ -120,3 +120,48 @@ form button {
 form button:hover {
     background-color: #333;
 }
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    header {
+        padding: 5px 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    body {
+        background: url('./background.jpg') no-repeat center top fixed;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background: url('./background.jpg') no-repeat center top fixed;
+        background-size: cover;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    section h2 {
+        font-size: 1.2em;
+    }
+
+    section p, nav ul li a {
+        font-size: 0.9em;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+}
