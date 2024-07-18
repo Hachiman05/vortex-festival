@@ -1,27 +1,30 @@
-// Fonction pour activer/désactiver le menu déroulant
 function toggleMenu() {
-    var menu = document.getElementById('menu');
-    if (menu.style.display === 'block') {
-        menu.style.display = 'none';
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('active');
+    if (nav.classList.contains('active')) {
+        document.addEventListener('click', closeMenuOnClickOutside);
     } else {
-        menu.style.display = 'block';
+        document.removeEventListener('click', closeMenuOnClickOutside);
     }
 }
-// Fonction d'initialisation de la carte Google Maps
+
+function closeMenuOnClickOutside(event) {
+    const nav = document.querySelector('nav');
+    const menuToggle = document.querySelector('.menu-toggle');
+    if (!nav.contains(event.target) && !menuToggle.contains(event.target)) {
+        nav.classList.remove('active');
+        document.removeEventListener('click', closeMenuOnClickOutside);
+    }
+}
+
 function initMap() {
-    // Coordonnées de Djerba
-    const djerba = { lat: 33.7925, lng: 10.8531 };
-
-    // Création de la carte centrée sur Djerba
-    const map = new google.maps.Map(document.getElementById("map"), {
+    var djerba = { lat: 33.8076, lng: 10.8465 };
+    var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
-        center: djerba,
+        center: djerba
     });
-
-    // Marqueur pour indiquer la position de Djerba
-    const marker = new google.maps.Marker({
+    var marker = new google.maps.Marker({
         position: djerba,
-        map: map,
-        title: "Djerba, Tunisia",
+        map: map
     });
 }

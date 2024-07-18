@@ -1,36 +1,21 @@
-/* Styles généraux */
 body {
     font-family: Arial, sans-serif;
+    color: white;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #333;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.2); /* Réduit l'opacité pour plus de transparence */
-    border-radius: 10px;
 }
 
 header {
-    position: relative;
-    background: rgba(26, 26, 26, 0.7); /* Couleur de fond plus sombre et transparente */
-    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5); /* Opacité de 50% */
+    color: white;
+    padding: 20px;
     text-align: center;
-    padding: 10px 0;
-    border-bottom: 4px solid #ff9933;
+    position: relative;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2em;
-}
-
-/* Styles pour le menu déroulant */
 .menu-toggle {
     position: absolute;
     top: 10px;
@@ -41,175 +26,85 @@ header h1 {
     color: #fff; /* Couleur de l'icône */
 }
 
-.menu-toggle i {
-    /* Pour centrer l'icône */
-    display: inline-block;
-    vertical-align: left;
+nav {
+    position: absolute;
+    top: 0;
+    left: -250px; /* Masquer le menu déroulant */
+    width: 250px; /* Largeur du menu déroulant */
+    height: 100%;
+    background-color: #333; /* Couleur de fond */
+    transition: left 0.3s ease; /* Transition pour l'animation */
+}
+
+nav.active {
+    left: 0; /* Afficher le menu déroulant */
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    text-align: center;
-    margin-top: 10px;
+    margin: 50px 0 0 0; /* Marge pour les liens du menu */
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 10px;
+    padding: 15px;
+    border-bottom: 1px solid #666; /* Bordure entre les liens */
 }
 
 nav ul li a {
-    text-decoration: none;
     color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    text-decoration: none;
+    font-size: 1.2em;
 }
 
-nav ul li a:hover {
-    background-color: #333;
-}
-
-section {
-    background: rgba(255, 255, 255, 0.7); /* Réduit l'opacité pour plus de transparence */
-    margin: 20px 0;
+.container {
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Opacité de 50% */
     border-radius: 10px;
+    margin: 20px;
 }
 
-h2 {
-    color: #1a1a1a;
-    text-align: center;
-}
-
-p {
-    line-height: 1.6;
-}
-
-/* Formulaire de contact */
-#contact {
-    background: rgba(255, 255, 255, 0.7); /* Réduit l'opacité pour plus de transparence */
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-#contact h2 {
-    text-align: center;
-    color: #1a1a1a; /* Couleur de titre plus sombre */
-}
-
-#contact form {
+form {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-#contact form label {
-    width: 100%;
-    max-width: 400px;
-    text-align: left;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-#contact form input[type="text"],
-#contact form input[type="email"],
-#contact form textarea {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 400px;
-}
-
-#contact form textarea {
-    resize: vertical;
-    height: 150px;
-}
-
-#contact form button {
+form label {
     margin-top: 10px;
-    background-color: #1a1a1a;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+}
+
+form input, form textarea {
+    margin-top: 5px;
+    padding: 10px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border: none;
 }
 
-#contact form button:hover {
-    background-color: #333;
+form button {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #444;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
 }
 
-/* Carte */
-#map {
-    height: 400px; /* Ajustez la hauteur selon vos besoins */
-    border-radius: 10px;
-    margin-top: 20px;
+form button:hover {
+    background-color: #555;
 }
 
-/* Media Queries pour la réactivité */
 @media (max-width: 768px) {
-    .container {
-        width: 95%;
-        padding: 10px;
-    }
-
     header {
-        padding: 5px 0;
+        text-align: center;
     }
 
-    .menu-toggle {
-        display: block;
+    .container {
+        margin: 10px;
     }
 
-    nav {
-        display: none;
-        text-align: left;
-        position: absolute;
-        top: 50px;
-        right: 0;
-        background: rgba(26, 26, 26, 0.9);
-        width: 100%;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        padding: 0;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 0;
-    }
-
-    nav ul li a {
-        padding: 10px;
-        border-bottom: 1px solid #fff;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    section h2 {
-        font-size: 1.2em;
-    }
-
-    section p,
-    nav ul li a {
-        font-size: 0.9em;
-    }
-
-    button {
-        padding: 8px 16px;
+    #map {
+        height: 300px;
     }
 }

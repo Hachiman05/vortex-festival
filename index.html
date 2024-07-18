@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VORTEX Festival</title>
     <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-s4yvk7FzNeLZ4W4MiCv9j+eJpZj9+IsF7T0wCkXlZrCnONWXjv/7kX7xSWopstY5z7r7SeBIVfucR17uqndT4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-s4yvk7FzNeLZ4W4MiCv9j+eJpZj9+IsF7T0wCkXlZrCnONWXjv/7kX7xSWopstY5z7r7SeBIVfucR17uqndT4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Styles spécifiques pour cette page uniquement */
         #map {
@@ -14,55 +13,13 @@
             border-radius: 10px;
             margin-top: 20px;
         }
-
-        /* Styles pour le menu déroulant */
-        .menu-toggle {
-            position: absolute;
-            top: 10px;
-            left: 10px; /* Ajustez la valeur en fonction de votre préférence */
-            font-size: 1.5em;
-            cursor: pointer;
-            z-index: 1000; /* Assurez-vous que l'icône est au-dessus du contenu */
-        }
-
-        nav {
-            position: absolute;
-            top: 0;
-            left: -250px; /* Masquer le menu déroulant */
-            width: 250px; /* Largeur du menu déroulant */
-            height: 100%;
-            background-color: #333; /* Couleur de fond */
-            transition: left 0.3s ease; /* Transition pour l'animation */
-        }
-
-        nav.active {
-            left: 0; /* Afficher le menu déroulant */
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 50px 0 0 0; /* Marge pour les liens du menu */
-        }
-
-        nav ul li {
-            padding: 15px;
-            border-bottom: 1px solid #666; /* Bordure entre les liens */
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.2em;
-        }
     </style>
 </head>
 <body>
     <header>
         <button class="menu-toggle" onclick="toggleMenu()">
-    <i class="fas fa-bars"></i>
-</button>
-
+            <i class="fas fa-bars"></i>
+        </button>
         <h1>VORTEX Festival</h1>
         <nav>
             <ul id="menu">
