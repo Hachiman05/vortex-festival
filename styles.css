@@ -12,12 +12,12 @@ body {
     width: 80%;
     margin: auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.8); /* Opacité réduite */
     border-radius: 10px;
 }
 
 header {
-    background: #1a1a1a;
+    background: rgba(26, 26, 26, 0.9); /* Couleur de fond plus sombre et transparente */
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -54,7 +54,7 @@ nav ul li a:hover {
 }
 
 section {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.9); /* Opacité réduite */
     margin: 20px 0;
     padding: 20px;
     border-radius: 10px;
@@ -71,7 +71,7 @@ p {
 
 /* Formulaire de contact */
 #contact {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.9); /* Opacité réduite */
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
