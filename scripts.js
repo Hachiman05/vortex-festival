@@ -1,9 +1,12 @@
 // Fonction pour activer/désactiver le menu déroulant
 function toggleMenu() {
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('active');
+    var menu = document.getElementById('menu');
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'block';
+    }
 }
-
 // Fonction d'initialisation de la carte Google Maps
 function initMap() {
     // Coordonnées de Djerba

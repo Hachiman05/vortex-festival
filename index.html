@@ -5,21 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VORTEX Festival</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styles spécifiques pour cette page uniquement */
+        #map {
+            height: 400px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        /* Styles pour le menu déroulant */
+        .menu-toggle {
+            position: absolute;
+            top: 10px;
+            left: 10px; /* Ajustez la valeur en fonction de votre préférence */
+            font-size: 1.5em;
+            cursor: pointer;
+            z-index: 1000; /* Assurez-vous que l'icône est au-dessus du contenu */
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            left: -250px; /* Masquer le menu déroulant */
+            width: 250px; /* Largeur du menu déroulant */
+            height: 100%;
+            background-color: #333; /* Couleur de fond */
+            transition: left 0.3s ease; /* Transition pour l'animation */
+        }
+
+        nav.active {
+            left: 0; /* Afficher le menu déroulant */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 50px 0 0 0; /* Marge pour les liens du menu */
+        }
+
+        nav ul li {
+            padding: 15px;
+            border-bottom: 1px solid #666; /* Bordure entre les liens */
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+    </style>
 </head>
 <body>
     <header>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </button>
         <h1>VORTEX Festival</h1>
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-        <nav id="menu">
-            <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#programme">Programme</a></li>
-                <li><a href="#billetterie">Billetterie</a></li>
-                <li><a href="#infos">Infos Pratiques</a></li>
-                <li><a href="#galerie">Galerie</a></li>
-                <li><a href="#partenaires">Partenaires</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#carte">Localisation</a></li>
+        <nav>
+            <ul id="menu">
+                <li><a href="#accueil" onclick="toggleMenu()">Accueil</a></li>
+                <li><a href="#programme" onclick="toggleMenu()">Programme</a></li>
+                <li><a href="#billetterie" onclick="toggleMenu()">Billetterie</a></li>
+                <li><a href="#infos" onclick="toggleMenu()">Infos Pratiques</a></li>
+                <li><a href="#galerie" onclick="toggleMenu()">Galerie</a></li>
+                <li><a href="#partenaires" onclick="toggleMenu()">Partenaires</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                <li><a href="#carte" onclick="toggleMenu()">Localisation</a></li>
             </ul>
         </nav>
     </header>
@@ -80,6 +131,6 @@
     </div>
 
     <script src="scripts.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhRTgFIFKg8I1rlDlsYPG6KKFMbwhUZfc&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 </body>
 </html>
