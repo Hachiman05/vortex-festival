@@ -8,13 +8,21 @@ body {
     padding: 0;
 }
 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+    margin: 0;
+}
+
 .menu-toggle {
-    position: fixed;
-    top: 10px;
-    left: 10px;
     font-size: 1.5em;
     cursor: pointer;
-    z-index: 1000;
     color: #fff;
     background: none;
     border: none;
