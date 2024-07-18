@@ -12,7 +12,7 @@ body {
     width: 80%;
     margin: auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.8); /* Opacité réduite */
+    background: rgba(255, 255, 255, 0.3); /* Opacité réduite */
     border-radius: 10px;
 }
 
