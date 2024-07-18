@@ -175,8 +175,13 @@ p {
     }
 
     .menu-toggle {
-        display: block;
-    }
+    position: absolute;
+    top: 10px;
+    left: 10px; /* Ajustez la valeur en fonction de votre préférence */
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 1000; /* Assurez-vous que l'icône est au-dessus du contenu */
+}
 
     nav {
         display: none;
