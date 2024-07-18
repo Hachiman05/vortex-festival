@@ -12,11 +12,12 @@ body {
     width: 80%;
     margin: auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.3); /* Opacité réduite */
+    background: rgba(255, 255, 255, 0.7); /* Réduit l'opacité pour plus de transparence */
     border-radius: 10px;
 }
 
 header {
+    position: relative;
     background: rgba(26, 26, 26, 0.9); /* Couleur de fond plus sombre et transparente */
     color: #fff;
     text-align: center;
@@ -29,16 +30,35 @@ header h1 {
     font-size: 2em;
 }
 
+.menu-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+nav {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
-    text-align: center;
+    text-align: left;
     margin-top: 10px;
+    display: none;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 10px;
+    display: block;
+    margin-bottom: 10px;
 }
 
 nav ul li a {
@@ -46,6 +66,7 @@ nav ul li a {
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
+    background: rgba(26, 26, 26, 0.9);
     transition: background-color 0.3s ease;
 }
 
@@ -53,8 +74,12 @@ nav ul li a:hover {
     background-color: #333;
 }
 
+header:hover nav ul {
+    display: block;
+}
+
 section {
-    background: rgba(255, 255, 255, 0.9); /* Opacité réduite */
+    background: rgba(255, 255, 255, 0.7); /* Réduit l'opacité pour plus de transparence */
     margin: 20px 0;
     padding: 20px;
     border-radius: 10px;
@@ -71,7 +96,7 @@ p {
 
 /* Formulaire de contact */
 #contact {
-    background: rgba(255, 255, 255, 0.9); /* Opacité réduite */
+    background: rgba(255, 255, 255, 0.7); /* Réduit l'opacité pour plus de transparence */
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
@@ -145,9 +170,39 @@ p {
         padding: 5px 0;
     }
 
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        text-align: left;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background: rgba(26, 26, 26, 0.9);
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
     nav ul li {
         display: block;
-        margin: 5px 0;
+        margin: 0;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        border-bottom: 1px solid #fff;
+    }
+
+    header:hover nav {
+        display: block;
     }
 }
 
@@ -165,7 +220,9 @@ p {
         font-size: 0.9em;
     }
 
-    button {
-        padding: 8px 16px;
+    #contact form input[type="text"],
+    #contact form input[type="email"],
+    #contact form textarea {
+        width: 90%;
     }
 }
