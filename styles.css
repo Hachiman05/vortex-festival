@@ -31,7 +31,7 @@ header h1 {
 }
 
 .menu-toggle {
-    display: none;
+    display: block;
     background-color: transparent;
     border: none;
     color: #fff;
@@ -40,12 +40,21 @@ header h1 {
     top: 10px;
     right: 20px;
     cursor: pointer;
+    z-index: 1000; /* Assurez-vous que l'icône est au-dessus du reste */
 }
 
 nav {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 0;
+    left: -300px; /* Menu caché par défaut */
+    width: 300px; /* Largeur du menu */
+    background: rgba(26, 26, 26, 0.9); /* Couleur de fond du menu */
+    transition: left 0.3s ease; /* Transition fluide pour l'animation */
+    z-index: 999; /* Assurez-vous que le menu est au-dessus du contenu */
+}
+
+nav.active {
+    left: 0; /* Affiche le menu lorsque la classe active est ajoutée */
 }
 
 nav ul {
@@ -53,7 +62,6 @@ nav ul {
     padding: 0;
     text-align: left;
     margin-top: 10px;
-    display: none;
 }
 
 nav ul li {
@@ -64,18 +72,14 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    padding: 5px 10px;
+    padding: 10px 20px;
     border-radius: 5px;
-    background: rgba(26, 26, 26, 0.9);
+    display: block;
     transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
     background-color: #333;
-}
-
-header:hover nav ul {
-    display: block;
 }
 
 section {
@@ -182,6 +186,10 @@ p {
         left: 0;
         background: rgba(26, 26, 26, 0.9);
         width: 100%;
+    }
+
+    nav.active {
+        display: block;
     }
 
     nav ul {
