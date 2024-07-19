@@ -1,29 +1,17 @@
-// Function to toggle the menu visibility
 function toggleMenu() {
-    const menu = document.querySelector('nav.menu');
+    var menu = document.querySelector('nav ul');
     menu.classList.toggle('active');
 }
 
-// Initialize Google Map
+// Initialize the map
 function initMap() {
-    // Map options
-    const options = {
-        zoom: 15,
-        center: { lat: 33.8823, lng: 10.8453 } // Coordinates for Djerba, adjust as needed
-    };
-
-    // Create a new map
-    const map = new google.maps.Map(document.getElementById('map'), options);
-
-    // Marker
-    const marker = new google.maps.Marker({
-        position: { lat: 33.8823, lng: 10.8453 }, // Coordinates for Djerba, adjust as needed
-        map: map,
-        title: 'VORTEX Festival Location'
+    var location = { lat: 33.8076, lng: 10.8472 }; // Djerba, Tunisia
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: location
+    });
+    var marker = new google.maps.Marker({
+        position: location,
+        map: map
     });
 }
-
-// Event listener for document ready
-document.addEventListener('DOMContentLoaded', function() {
-    // Any additional JavaScript code can go here
-});
