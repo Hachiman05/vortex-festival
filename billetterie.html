@@ -5,20 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VORTEX Festival - Billetterie</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styles spécifiques pour cette page uniquement */
+        #map {
+            height: 400px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </button>
         <h1>VORTEX Festival</h1>
         <nav class="menu">
             <ul>
                 <li><a href="index.html#accueil" onclick="toggleMenu()">Accueil</a></li>
-                <li><a href="programme.html" onclick="toggleMenu()">Programme</a></li>
+                <li><a href="index.html#programme" onclick="toggleMenu()">Programme</a></li>
                 <li><a href="billetterie.html" onclick="toggleMenu()">Billetterie</a></li>
-                <li><a href="infos.html" onclick="toggleMenu()">Infos Pratiques</a></li>
-                <li><a href="galerie.html" onclick="toggleMenu()">Galerie</a></li>
-                <li><a href="partenaires.html" onclick="toggleMenu()">Partenaires</a></li>
-                <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+                <li><a href="index.html#infos" onclick="toggleMenu()">Infos Pratiques</a></li>
+                <li><a href="index.html#galerie" onclick="toggleMenu()">Galerie</a></li>
+                <li><a href="index.html#partenaires" onclick="toggleMenu()">Partenaires</a></li>
+                <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
                 <li><a href="index.html#carte" onclick="toggleMenu()">Localisation</a></li>
             </ul>
         </nav>
@@ -28,7 +38,7 @@
         <section id="billetterie">
             <h2>Billetterie</h2>
             <p>Réservez vos billets dès maintenant pour garantir votre place au VORTEX Festival.</p>
-            <p><a href="billetterie.html" class="button">Achetez vos billets ici</a></p>
+            <p><a href="billetterie.html">Achetez vos billets ici</a></p>
         </section>
     </div>
 
