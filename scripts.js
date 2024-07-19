@@ -1,29 +1,12 @@
 function toggleMenu() {
-    const menu = document.querySelector('nav.menu');
-    menu.classList.toggle('active');
+    const menu = document.querySelector('.menu');
+    menu.style.display = (menu.style.display === 'block' ? 'none' : 'block');
 }
 
-function closeMenuOnClickOutside(event) {
-    const menu = document.querySelector('nav.menu');
-    const menuToggle = document.querySelector('.menu-toggle');
-    if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
-        menu.classList.remove('active');
-        document.removeEventListener('click', closeMenuOnClickOutside);
+document.addEventListener('click', function(event) {
+    const menu = document.querySelector('.menu');
+    const toggleButton = document.querySelector('.menu-toggle');
+    if (!menu.contains(event.target) && !toggleButton.contains(event.target)) {
+        menu.style.display = 'none';
     }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    document.addEventListener('click', closeMenuOnClickOutside);
 });
-
-function initMap() {
-    var djerba = { lat: 33.8076, lng: 10.8465 };
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 10,
-        center: djerba
-    });
-    var marker = new google.maps.Marker({
-        position: djerba,
-        map: map
-    });
-}

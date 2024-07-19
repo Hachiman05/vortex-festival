@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - VORTEX Festival</title>
+    <title>Localisation - VORTEX Festival</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -30,13 +30,27 @@
     </nav>
 
     <div class="container mt-4">
-        <section id="accueil">
-            <h2>Accueil</h2>
-            <p>Bienvenue au VORTEX Festival, le rendez-vous incontournable de la musique électronique à Djerba !</p>
-            <p>Rejoignez-nous pour une expérience sonore et visuelle unique, avec des artistes renommés et une ambiance électrisante.</p>
+        <section id="carte">
+            <h2>Localisation</h2>
+            <p>Trouvez-nous facilement avec cette carte interactive :</p>
+            <div id="map" style="height: 400px;"></div>
         </section>
     </div>
 
     <script src="scripts.js"></script>
+    <script>
+        function initMap() {
+            var location = { lat: 33.8076, lng: 10.8475 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
 </body>
 </html>

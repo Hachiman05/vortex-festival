@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - VORTEX Festival</title>
+    <title>Contact - VORTEX Festival</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -30,10 +30,20 @@
     </nav>
 
     <div class="container mt-4">
-        <section id="accueil">
-            <h2>Accueil</h2>
-            <p>Bienvenue au VORTEX Festival, le rendez-vous incontournable de la musique électronique à Djerba !</p>
-            <p>Rejoignez-nous pour une expérience sonore et visuelle unique, avec des artistes renommés et une ambiance électrisante.</p>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form action="send_email.php" method="POST">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required class="form-control"><br>
+                
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required class="form-control"><br>
+                
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required class="form-control"></textarea><br>
+                
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
         </section>
     </div>
 
