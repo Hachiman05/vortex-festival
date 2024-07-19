@@ -140,3 +140,43 @@ form textarea {
 #billetterie a:hover {
     background-color: #ff3300;
 }
+/* Centrer les titres des sections */
+section h2 {
+    text-align: center;
+}
+
+/* Centrer le contenu des sections */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Centrer le titre principal (VORTEX Festival) */
+header h1 {
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.billetterie-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.billetterie-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
