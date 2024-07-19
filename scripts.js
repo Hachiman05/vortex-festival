@@ -1,15 +1,13 @@
 function toggleMenu() {
-    var menu = document.querySelector('.menu');
-    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('show');
 }
 
+// Close the menu when clicking outside
 document.addEventListener('click', function(event) {
-    var menu = document.querySelector('.menu');
-    var menuToggle = document.querySelector('.menu-toggle');
-    var isClickInsideMenu = menu.contains(event.target);
-    var isClickOnToggle = menuToggle.contains(event.target);
-
-    if (!isClickInsideMenu && !isClickOnToggle) {
-        menu.style.display = 'none';
+    const menu = document.querySelector('.menu');
+    const menuToggle = document.querySelector('.menu-toggle');
+    if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+        menu.classList.remove('show');
     }
 });

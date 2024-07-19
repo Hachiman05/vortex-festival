@@ -1,88 +1,99 @@
-body, html {
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background: url('vortex-background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: 100%;
 }
 
-header {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+h1 {
+    text-align: center;
+    color: #fff;
 }
 
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    color: #666;
+}
+
+/* Menu Styles */
 .menu {
-    display: none;
     position: fixed;
     top: 0;
-    left: 0;
+    left: -250px;
     width: 250px;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 1000;
+    background-color: #333;
+    transition: left 0.3s ease;
     padding-top: 60px;
 }
 
 .menu ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
 .menu ul li {
-    padding: 10px;
+    padding: 15px;
+    border-bottom: 1px solid #666;
 }
 
 .menu ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
+    font-size: 1.2em;
     display: block;
-    padding: 10px 15px;
 }
 
-.menu ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+.menu.show {
+    left: 0;
 }
 
 .menu-toggle {
+    font-size: 1.5em;
+    cursor: pointer;
     background: none;
     border: none;
-    color: white;
-    font-size: 24px;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
-.container {
-    margin-top: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-h2 {
-    margin-top: 0;
-}
-
-form label {
-    display: block;
-    margin-top: 10px;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-}
-
-form button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #ff5722;
     border: none;
     border-radius: 5px;
+    text-decoration: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-form button:hover {
-    background-color: #0056b3;
+.btn:hover {
+    background-color: #e64a19;
+}
+
+/* Section Styles */
+section {
+    margin: 20px 0;
 }

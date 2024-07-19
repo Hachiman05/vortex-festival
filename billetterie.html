@@ -3,37 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Billetterie - VORTEX Festival</title>
+    <title>VORTEX Festival - Billetterie</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <header class="bg-dark text-white p-3 d-flex justify-content-between align-items-center">
-        <button class="menu-toggle btn btn-outline-light" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
-        </button>
-        <h1 class="h3">VORTEX Festival</h1>
+    <header>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <h1>VORTEX Festival</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html#accueil" onclick="toggleMenu()">Accueil</a></li>
+                <li><a href="programme.html" onclick="toggleMenu()">Programme</a></li>
+                <li><a href="billetterie.html" onclick="toggleMenu()">Billetterie</a></li>
+                <li><a href="infos.html" onclick="toggleMenu()">Infos Pratiques</a></li>
+                <li><a href="galerie.html" onclick="toggleMenu()">Galerie</a></li>
+                <li><a href="partenaires.html" onclick="toggleMenu()">Partenaires</a></li>
+                <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+                <li><a href="index.html#carte" onclick="toggleMenu()">Localisation</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav class="menu">
-        <ul>
-            <li><a href="index.html" onclick="toggleMenu()">Accueil</a></li>
-            <li><a href="programme.html" onclick="toggleMenu()">Programme</a></li>
-            <li><a href="billetterie.html" onclick="toggleMenu()">Billetterie</a></li>
-            <li><a href="infos.html" onclick="toggleMenu()">Infos Pratiques</a></li>
-            <li><a href="galerie.html" onclick="toggleMenu()">Galerie</a></li>
-            <li><a href="partenaires.html" onclick="toggleMenu()">Partenaires</a></li>
-            <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
-            <li><a href="carte.html" onclick="toggleMenu()">Localisation</a></li>
-        </ul>
-    </nav>
-
-    <div class="container mt-4">
+    <div class="container">
         <section id="billetterie">
             <h2>Billetterie</h2>
             <p>Réservez vos billets dès maintenant pour garantir votre place au VORTEX Festival.</p>
-            <p><a href="billetterie.html">Achetez vos billets ici</a></p>
+            <p><a href="billetterie.html" class="btn">Achetez vos billets ici</a></p>
         </section>
     </div>
 
