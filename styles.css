@@ -127,3 +127,16 @@ form textarea {
     height: 150px;
     resize: vertical;
 }
+#billetterie a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#billetterie a:hover {
+    background-color: #ff3300;
+}
