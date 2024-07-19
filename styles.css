@@ -1,10 +1,12 @@
 /* Global Styles */
 body {
     margin: 0;
+padding-top: 70px; /* Ajustez cette valeur en fonction de la hauteur de votre header */
     font-family: Arial, sans-serif;
     color: #fff;
     background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
+
 }
 
 header {
@@ -143,6 +145,52 @@ form textarea {
 /* Centrer les titres des sections */
 section h2 {
     text-align: center;
+}
+/* Fond sombre et transparent pour les titres */
+section h2 {
+    background-color: rgba(0, 0, 0, 0.5); /* Fond noir avec transparence à 50% */
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+/* Fond clair et transparent pour les textes */
+section p {
+    background-color: rgba(255, 255, 255, 0.7); /* Fond blanc avec transparence à 70% */
+    color: #000;
+    padding: 10px;
+    border-radius: 5px;
+}
+/* Header fixe */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fond noir avec transparence à 80% */
+    color: #fff;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.billetterie-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
 }
 
 /* Centrer le contenu des sections */
