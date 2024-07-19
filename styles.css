@@ -1,65 +1,88 @@
-body {
-    font-family: Arial, sans-serif;
+body, html {
     margin: 0;
     padding: 0;
-    background: url('background.jpg') no-repeat center center fixed;
+    font-family: Arial, sans-serif;
+    background: url('vortex-background.jpg') no-repeat center center fixed;
     background-size: cover;
+    height: 100%;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(51, 51, 51, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    padding: 10px;
-}
-
-.menu-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5em;
 }
 
 .menu {
     display: none;
-    background-color: rgba(51, 51, 51, 0.8);
-    padding: 10px;
-    position: absolute;
-    top: 50px;
+    position: fixed;
+    top: 0;
     left: 0;
     width: 250px;
-    text-align: left;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
     z-index: 1000;
+    padding-top: 60px;
 }
 
 .menu ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 .menu ul li {
-    padding: 10px 0;
+    padding: 10px;
 }
 
 .menu ul li a {
     color: white;
     text-decoration: none;
     display: block;
-    width: 100%;
+    padding: 10px 15px;
+}
+
+.menu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
 }
 
 .container {
-    padding: 20px;
+    margin-top: 20px;
     background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
     border-radius: 10px;
-    margin: 20px auto;
-    width: 90%;
-    max-width: 1200px;
 }
 
 h2 {
     margin-top: 0;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
 }

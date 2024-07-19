@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Styles spécifiques pour cette page uniquement */
+        #map {
+            height: 400px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header class="bg-dark text-white p-3 d-flex justify-content-between align-items-center">
@@ -32,17 +40,17 @@
     <div class="container mt-4">
         <section id="carte">
             <h2>Localisation</h2>
-            <p>Trouvez-nous facilement avec cette carte interactive :</p>
-            <div id="map" style="height: 400px;"></div>
+            <p>Venez nous retrouver à notre emplacement exact sur la carte ci-dessous :</p>
+            <div id="map"></div>
         </section>
     </div>
 
     <script src="scripts.js"></script>
     <script>
         function initMap() {
-            var location = { lat: 33.8076, lng: 10.8475 };
+            var location = {lat: 33.800002, lng: 10.850000}; // Coordonées de Djerba
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 15,
+                zoom: 10,
                 center: location
             });
             var marker = new google.maps.Marker({
@@ -51,7 +59,6 @@
             });
         }
     </script>
-    <script src="scripts.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhRTgFIFKg8I1rlDlsYPG6KKFMbwhUZfc&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 </body>
 </html>
