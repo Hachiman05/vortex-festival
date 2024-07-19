@@ -6,7 +6,7 @@ body {
     background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #333;
-    padding-top: 70px; /* Pour compenser le header fixe */
+    padding-top: 80px; /* to ensure content isn't hidden behind the fixed header */
 }
 
 .container {
@@ -17,15 +17,16 @@ body {
     border-radius: 10px;
 }
 
+/* Header styles */
 header {
+    position: fixed;
+    top: 0;
+    width: 100%;
     background: rgba(26, 26, 26, 0.9); /* Couleur de fond plus sombre et transparente */
     color: #fff;
     text-align: center;
     padding: 10px 0;
     border-bottom: 4px solid #ff9933;
-    position: fixed;
-    top: 0;
-    width: 100%;
     z-index: 1000;
 }
 
@@ -34,6 +35,7 @@ header h1 {
     font-size: 2em;
 }
 
+/* Navigation styles */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -58,6 +60,7 @@ nav ul li a:hover {
     background-color: #333;
 }
 
+/* Section styles */
 section {
     background: rgba(255, 255, 255, 0.9); /* Opacité réduite */
     margin: 20px 0;
@@ -66,18 +69,11 @@ section {
 }
 
 h2 {
-    background-color: rgba(0, 0, 0, 0.5); /* Fond noir avec transparence à 50% */
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
+    color: #1a1a1a;
     text-align: center;
 }
 
 p {
-    background-color: rgba(255, 255, 255, 0.7); /* Fond blanc avec transparence à 70% */
-    color: #000;
-    padding: 10px;
-    border-radius: 5px;
     line-height: 1.6;
 }
 
