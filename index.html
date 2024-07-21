@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VORTEX Festival</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>VORTEX Festival</h1>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#programme">Programme</a></li>
+                <li><a href="#billetterie">Billetterie</a></li>
+                <li><a href="#infos">Infos Pratiques</a></li>
+                <li><a href="#galerie">Galerie</a></li>
+                <li><a href="#partenaires">Partenaires</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#carte">Localisation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Accueil -->
+        <section id="accueil">
+            <h2>Accueil</h2>
+            <p>Bienvenue au VORTEX Festival !</p>
+        </section>
+
+        <!-- Programme -->
+        <section id="programme">
+            <h2>Programme</h2>
+            <p>Découvrez le programme complet du festival, avec des performances live, des DJ sets et des activités spéciales.</p>
+        </section>
+
+        <!-- Billetterie -->
+        <section id="billetterie">
+            <h2>Billetterie</h2>
+            <p>Achetez vos billets pour le VORTEX Festival en ligne. Ne manquez pas cet événement incroyable !</p>
+            <button id="buy-tickets">Acheter des billets</button>
+        </section>
+
+        <!-- Infos Pratiques -->
+        <section id="infos">
+            <h2>Infos Pratiques</h2>
+            <p>Toutes les informations essentielles pour préparer votre venue : horaires, plan du site, options d'hébergement et bien plus encore.</p>
+        </section>
+
+        <!-- Galerie -->
+        <section id="galerie">
+            <h2>Galerie</h2>
+            <p>Explorez notre galerie photo pour revivre les meilleurs moments des éditions précédentes du festival.</p>
+        </section>
+
+        <!-- Partenaires -->
+        <section id="partenaires">
+            <h2>Partenaires</h2>
+            <p>Nos partenaires et sponsors qui rendent cet événement possible. Merci pour leur soutien continu !</p>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <form action="send_email.php" method="POST">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required><br>
+                
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required><br>
+                
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required></textarea><br>
+                
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+
+        <!-- Localisation -->
+        <section id="carte">
+            <h2>Localisation</h2>
+            <div id="map"></div>
+        </section>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhRTgFIFKg8I1rlDlsYPG6KKFMbwhUZfc&callback=initMap"></script>
+</body>
+</html>
