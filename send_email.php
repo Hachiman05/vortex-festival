@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = htmlspecialchars($_POST['email']);
     $message = htmlspecialchars($_POST['message']);
 
-    $to = "contact@vortexfestival.com";
+    $to = "bedisdofus@gmail.com";
     $subject = "Nouveau message de $nom";
     $body = "Nom: $nom\nEmail: $email\nMessage:\n$message";
     $headers = "From: $email";
