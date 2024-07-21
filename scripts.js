@@ -1,14 +1,12 @@
-// script.js
+function toggleMenu() {
+    var nav = document.querySelector('nav ul');
+    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+}
 
-// Function to initialize the Google Map
 function initMap() {
-    const location = { lat: 33.8076, lng: 10.8515 };
-    const map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 10,
-        center: location
-    });
-    const marker = new google.maps.Marker({
-        position: location,
-        map: map
-    });
+    var mapOptions = {
+        center: new google.maps.LatLng(46.603354, 1.888334),
+        zoom: 6
+    };
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 }
