@@ -7,84 +7,85 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>VORTEX Festival</h1>
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-        <nav>
-            <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#programme">Programme</a></li>
-                <li><a href="#billetterie">Billetterie</a></li>
-                <li><a href="#infos">Infos Pratiques</a></li>
-                <li><a href="#galerie">Galerie</a></li>
-                <li><a href="#partenaires">Partenaires</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#carte">Localisation</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header role="banner">
+    <h1>VORTEX Festival</h1>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation menu">☰</button>
+    <nav role="navigation" aria-label="Main menu">
+        <ul>
+            <li><a href="#accueil" aria-label="Go to Accueil section">Accueil</a></li>
+            <li><a href="#programme" aria-label="Go to Programme section">Programme</a></li>
+            <li><a href="#billetterie" aria-label="Go to Billetterie section">Billetterie</a></li>
+            <li><a href="#infos" aria-label="Go to Infos Pratiques section">Infos Pratiques</a></li>
+            <li><a href="#galerie" aria-label="Go to Galerie section">Galerie</a></li>
+            <li><a href="#partenaires" aria-label="Go to Partenaires section">Partenaires</a></li>
+            <li><a href="#contact" aria-label="Go to Contact section">Contact</a></li>
+            <li><a href="#carte" aria-label="Go to Localisation section">Localisation</a></li>
+        </ul>
+    </nav>
+</header>
 
     <div class="container">
-        <!-- Accueil -->
-        <section id="accueil">
-            <h2>Accueil</h2>
-            <p>Bienvenue au VORTEX Festival !</p>
-        </section>
+    <!-- Accueil Section -->
+    <section id="accueil" role="region" aria-labelledby="accueil-heading">
+        <h2 id="accueil-heading">Accueil</h2>
+        <p>Bienvenue au VORTEX Festival !</p>
+    </section>
 
-        <!-- Programme -->
-        <section id="programme">
-            <h2>Programme</h2>
-            <p>Découvrez le programme complet du festival, avec des performances live, des DJ sets et des activités spéciales.</p>
-        </section>
+    <!-- Programme Section -->
+    <section id="programme" role="region" aria-labelledby="programme-heading">
+        <h2 id="programme-heading">Programme</h2>
+        <p>Découvrez le programme complet du festival, avec des performances live, des DJ sets et des activités spéciales.</p>
+    </section>
 
-        <!-- Billetterie -->
-        <section id="billetterie">
-            <h2>Billetterie</h2>
-            <p>Achetez vos billets pour le VORTEX Festival en ligne. Ne manquez pas cet événement incroyable !</p>
-            <button id="buy-tickets">Acheter des billets</button>
-        </section>
+    <!-- Billetterie Section -->
+    <section id="billetterie" role="region" aria-labelledby="billetterie-heading">
+        <h2 id="billetterie-heading">Billetterie</h2>
+        <p>Achetez vos billets pour le VORTEX Festival en ligne. Ne manquez pas cet événement incroyable !</p>
+        <button id="buy-tickets" aria-label="Buy tickets">Acheter des billets</button>
+    </section>
 
-        <!-- Infos Pratiques -->
-        <section id="infos">
-            <h2>Infos Pratiques</h2>
-            <p>Toutes les informations essentielles pour préparer votre venue : horaires, plan du site, options d'hébergement et bien plus encore.</p>
-        </section>
+    <!-- Infos Pratiques Section -->
+    <section id="infos" role="region" aria-labelledby="infos-heading">
+        <h2 id="infos-heading">Infos Pratiques</h2>
+        <p>Toutes les informations essentielles pour préparer votre venue : horaires, plan du site, options d'hébergement et bien plus encore.</p>
+    </section>
 
-        <!-- Galerie -->
-        <section id="galerie">
-            <h2>Galerie</h2>
-            <p>Explorez notre galerie photo pour revivre les meilleurs moments des éditions précédentes du festival.</p>
-        </section>
+    <!-- Galerie Section -->
+    <section id="galerie" role="region" aria-labelledby="galerie-heading">
+        <h2 id="galerie-heading">Galerie</h2>
+        <p>Explorez notre galerie photo pour revivre les meilleurs moments des éditions précédentes du festival.</p>
+    </section>
 
-        <!-- Partenaires -->
-        <section id="partenaires">
-            <h2>Partenaires</h2>
-            <p>Nos partenaires et sponsors qui rendent cet événement possible. Merci pour leur soutien continu !</p>
-        </section>
+    <!-- Partenaires Section -->
+    <section id="partenaires" role="region" aria-labelledby="partenaires-heading">
+        <h2 id="partenaires-heading">Partenaires</h2>
+        <p>Nos partenaires et sponsors qui rendent cet événement possible. Merci pour leur soutien continu !</p>
+    </section>
 
-        <!-- Contact -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <form action="send_email.php" method="POST">
-                <label for="nom">Nom :</label>
-                <input type="text" id="nom" name="nom" required><br>
-                
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required><br>
-                
-                <label for="message">Message :</label>
-                <textarea id="message" name="message" required></textarea><br>
-                
-                <button type="submit">Envoyer</button>
-            </form>
-        </section>
+    <!-- Contact Section -->
+    <section id="contact" role="region" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact</h2>
+        <form action="send_email.php" method="POST">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required aria-required="true"><br>
+            
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required aria-required="true"><br>
+            
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required aria-required="true"></textarea><br>
+            
+            <button type="submit" aria-label="Send message">Envoyer</button>
+        </form>
+    </section>
 
-        <!-- Localisation -->
-        <section id="carte">
-            <h2>Localisation</h2>
-            <div id="map"></div>
-        </section>
-    </div>
+    <!-- Carte Section -->
+    <section id="carte" role="region" aria-labelledby="carte-heading">
+        <h2 id="carte-heading">Localisation</h2>
+        <div id="map" aria-label="Map showing the festival location"></div>
+    </section>
+</div>
+
 
     <script src="scripts.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhRTgFIFKg8I1rlDlsYPG6KKFMbwhUZfc&callback=initMap"></script>
